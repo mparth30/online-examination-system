@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card"><div class="card-body">
+  <h5>Exam: {{ exam.title }}</h5>
+  <form method="post" action="{% url 'submit_exam' exam.pk %}">{% csrf_token %}
+    {% for q in exam.questions.all %}
+      <div class="mb-3"><p><strong>Q{{ forloop.counter }}. {{ q.text }}</strong></p>
+        <div><label><input type="radio" name="question_{{ q.id }}" value="A"> A) {{ q.option_a }}</label></div>
+        <div><label><input type="radio" name="question_{{ q.id }}" value="B"> B) {{ q.option_b }}</label></div>
+        {% if q.option_c %}<div><label><input type="radio" name="question_{{ q.id }}" value="C"> C) {{ q.option_c }}</label></div>{% endif %}
+        {% if q.option_d %}<div><label><input type="radio" name="question_{{ q.id }}" value="D"> D) {{ q.option_d }}</label></div>{% endif %}
+      </div>
+    {% endfor %}
+    <button class="btn btn-success" type="submit">Submit Exam</button>
+  </form>
+</div></div>
+{% endblock %}

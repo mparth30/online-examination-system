@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card"><div class="card-body"><h5>Available Exams</h5>
+  <ul class="list-group">
+    {% for e in exams %}<li class="list-group-item"><strong>{{ e.title }}</strong> - {{ e.duration_minutes }} mins <a class="btn btn-sm btn-primary float-end" href="{% url 'start_exam' e.pk %}">Start</a></li>{% endfor %}
+  </ul>
+</div></div>
+{% endblock %}
