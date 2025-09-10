@@ -1,6 +1,9 @@
 Online Examination System
-An Online Examination System built with Python that allows students to take exams online and teachers/admins to manage exams, questions, and results. This system helps conduct tests digitally, reducing paperwork and automating result processing.
-________________________________________
+
+An Online Examination System built with Python that allows students to take exams online and teachers/admins to manage exams, questions, and results.
+This system helps conduct tests digitally, reducing paperwork and automating result processing.
+
+
 🚀 Features
 
 •	🔑 User Authentication (Admin, Teacher, Student)
@@ -11,7 +14,9 @@ ________________________________________
 •	📊 Result Management with auto-grading for MCQs
 •	📅 Exam Scheduling with timer
 •	📱 Responsive & user-friendly interface
-________________________________________
+
+
+
 🛠️ Tech Stack
 
 •	Backend: Python (Django)
